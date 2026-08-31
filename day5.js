@@ -10,4 +10,4 @@ getWeather.then((name) =>
     console.log("Today's weather: Sunny");
 });
 
-console.log("Checking weather");                                                                                                                            
+console.log("Checking weather...");                                                                                                                            

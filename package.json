@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/donald2001-tech/backend-learning-journey#readme",
   "dependencies": {
-    "chalk": "^4.1.2"
+    "chalk": "^4.1.2",
+    "express": "^5.2.1"
   }
 }

@@ -31,6 +31,21 @@ app.get("/reverse/:word", (req, res) => {
     res.send(`${word} reversed is ${reversed}`);
 });
 
+
+app.get("/add/:num1/:num2", (req, res) => {
+  const num1 = Number(req.params.num1);
+  const num2 = Number(req.params.num2);
+  const sum = num1 + num2;
+  res.send(`${num1} + ${num2} = ${sum}`);
+});
+
+app.get("/multiply/:num1/:num2", (req, res) => {
+    const num1 = Number(req.params.num1);
+    const num2 = Number(req.params.num2);
+    const product = num1 * num2;
+    res.send(`${num1} * ${num2} = ${product}`);
+});
+
 app.listen(PORT, () => {
 console.log(`Server running on http://localhost:${PORT}`);    
 });

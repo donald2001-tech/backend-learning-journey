@@ -31,8 +31,9 @@ app.get("/reverse/:word", (req, res) => {
     res.send(`${word} reversed is ${reversed}`);
 });
 
-
+// a route that have multiple params
 app.get("/add/:num1/:num2", (req, res) => {
+    //(Number() - converting params to actual # b4 doing maths)
   const num1 = Number(req.params.num1);
   const num2 = Number(req.params.num2);
   const sum = num1 + num2;
@@ -44,6 +45,12 @@ app.get("/multiply/:num1/:num2", (req, res) => {
     const num2 = Number(req.params.num2);
     const product = num1 * num2;
     res.send(`${num1} * ${num2} = ${product}`);
+});
+
+app.get("/celcius-to-fahrenheit/:celcius", (req, res) => {
+    const celcius = Number(req.params.celcius);
+    const fahrenheit = (celcius * 9/5) + 32;
+    res.send(`${celcius} is ${fahrenheit}`);
 });
 
 app.listen(PORT, () => {

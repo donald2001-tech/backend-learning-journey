@@ -1,5 +1,10 @@
+//Load the express package (installed earlier with npm installed express)
 const express = require("express");
+
+//Actual server application - all routes and setup happen through app
 const app = express();
+
+
 app.use(express.json());
 
 let tasks = [
